@@ -35,7 +35,7 @@ document.getElementById('michi-info').textContent = `${randomInfo.job} • ${ran
 
     } catch (error) {
         console.error("Couldn find kitties: ", error);
-        alert("We couldnt contact with Tinder Beauty Cat")
+        alert("We couldnt contact with Tinder Beauty Kat")
     }
 }
 
