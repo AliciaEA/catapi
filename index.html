@@ -35,8 +35,8 @@
             </div>
 
             <button onclick="toggleMobileMenu()" class="md:hidden text-gray-600 text-2xl">
-            <i class="fas fa-bars"></i>
-        </button>
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
@@ -48,16 +48,21 @@
             </div>
 
             <div class="flex flex-col gap-4 text-gray-600 font-medium">
-            <a href="#home" onclick="toggleMobileMenu()" class="hover:text-pink-500"><i class="fas fa-home w-8"></i> Home</a>
-            <a href="#tinder" onclick="toggleMobileMenu()" class="hover:text-pink-500"><i class="fas fa-fire w-8"></i> TinderKat</a>
-            <a href="#facts" onclick="toggleMobileMenu()" class="hover:text-pink-500"><i class="fas fa-lightbulb w-8"></i> Facts</a>
-            <a href="#about" onclick="toggleMobileMenu()" class="hover:text-pink-500"><i class="fas fa-info-circle w-8"></i> About</a>
-            <a href="#faq" onclick="toggleMobileMenu()" class="hover:text-pink-500"><i class="fas fa-question-circle w-8"></i> FAQ</a>
-            <hr>
-            <button onclick="toggleMobileMenu(); toggleFavorites();" class="text-pink-500 text-left font-bold">
-                <i class="fas fa-heart w-8"></i> Favorites
-            </button>
-        </div>
+                <a href="#home" onclick="toggleMobileMenu()" class="hover:text-pink-500"><i class="fas fa-home w-8"></i>
+                    Home</a>
+                <a href="#tinder" onclick="toggleMobileMenu()" class="hover:text-pink-500"><i
+                        class="fas fa-fire w-8"></i> TinderKat</a>
+                <a href="#facts" onclick="toggleMobileMenu()" class="hover:text-pink-500"><i
+                        class="fas fa-lightbulb w-8"></i> Facts</a>
+                <a href="#about" onclick="toggleMobileMenu()" class="hover:text-pink-500"><i
+                        class="fas fa-info-circle w-8"></i> About</a>
+                <a href="#faq" onclick="toggleMobileMenu()" class="hover:text-pink-500"><i
+                        class="fas fa-question-circle w-8"></i> FAQ</a>
+                <hr>
+                <button onclick="toggleMobileMenu(); toggleFavorites();" class="text-pink-500 text-left font-bold">
+                    <i class="fas fa-heart w-8"></i> Favorites
+                </button>
+            </div>
         </div>
     </div>
 
@@ -196,6 +201,42 @@
                     </p>
                 </div>
 
+            </div>
+        </section>
+
+        <section id="contact" class="max-w-4xl mx-auto py-16 px-4">
+            <div
+                class="bg-pink-500 rounded-3xl p-8 md:p-12 shadow-xl flex flex-col md:flex-row items-center gap-8 text-white">
+                <div class="flex-1 text-center md:text-left">
+                    <h2 class="text-3xl font-bold mb-4"> Join the Purr-letter!</h2>
+                    <p class="opacity-90 mb-6">Stay updated with the cutest matches and daily cat facts. No spam, just
+                        whiskers!</p>
+                    <div class="flex flex-col gap-3 text-sm">
+                        <p><i class="fas fa-location-dot mr-2"></i> The Cat Land</p>
+                    </div>
+
+                    <div class="flex-1 w-full bg-white p-6 rounded-2xl shadow-lg">
+                        <form class="flex flex-col gap-4 text-gray-800"
+                            onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+                            <div>
+                                <label class="text-xs font-bold uppercase tracking-wider text-gray-400">Your
+                                    Name</label>
+                                <input type="text" placeholder="Cat Lover"
+                                    class="w-full mt-1 p-3 bg-gray-100 border-none rounded-xl focus:ring-2 focus:ring-pink-500 transition">
+                            </div>
+                            <div>
+                                <label class="text-xs font-bold uppercase tracking-wider text-gray-400">Your
+                                    Name</label>
+                                <input type="email" placeholder="meow@example.cp,"
+                                    class="w-full mt-1 p-3 bg-gray-100 border-none rounded-xl focus:ring-2 focus:ring-pink-500 transition">
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-pink-500 text-white font-bold py-3 rounded-xl hover:bg-pink-600 transition shadow-md shadow-pink-200">
+                                Subscribe Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
 
