@@ -1,0 +1,44 @@
+{
+    "personalities": [
+        {
+            "name": "Sir Fluffsalot",
+            "job": "Professional Napper",
+            "location": "1 mile away"
+        },
+        {
+            "name": "Shadow",
+            "job": "Laser Chase Specialist",
+            "location": "3 miles away"
+        },
+        {
+            "name": "Luna",
+            "job": "International Tuna Critic",
+            "location": "Local Legend"
+        },
+        {
+            "name": "Captain Whiskers",
+            "job": "Box Quality Inspector",
+            "location": "5 miles away"
+        },
+        {
+            "name": "Bella",
+            "job": "High-Shelf Explorer",
+            "location": "2 miles away"
+        },
+        {
+            "name": "Oliver",
+            "job": "Keyboard Typing Assistant",
+            "location": "Nearby"
+        },
+        {
+            "name": "Milo",
+            "job": "Midnight Zoomies Athlete",
+            "location": "4 miles away"
+        },
+        {
+            "name": "Cleo",
+            "job": "Bird Watching Enthusiast",
+            "location": "0.5 miles away"
+        }
+    ]
+}

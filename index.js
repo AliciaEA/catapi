@@ -6,34 +6,44 @@ const favPanel = document.getElementById('fav-panel')
 
 let currentCatUrl = "";
 
-async function fetchCat(){
+async function fetchCat() {
     loader.classList.remove('hidden')
     card.classList.remove('swipe-left', 'swipe-right')
 
-    try{
+    try {
         const response = await fetch("https://api.thecatapi.com/v1/images/search")
         const data = await response.json()
         currentCatUrl = data[0].url
 
+        // Data (Cats) Json
+        const dataRes =  await fetch('./dataKat.json')
+        const localData = await dataRes.json()
+
+        const personalities = localData.personalities
+        const randomInfo = personalities[Math.floor(Math.random()* personalities.length)]
+
+        document.getElementById('michi-nombre').textContent = randomInfo.name
+document.getElementById('michi-info').textContent = `${randomInfo.job} • ${randomInfo.location}`
+
+        // Cat Images from the API
         const img = new Image()
         img.src = currentCatUrl;
-        img.onload = () =>{
+        img.onload = () => {
             catImg.src = currentCatUrl;
             loader.classList.add('hidden')
         }
 
-    }catch(error)
-    {
+    } catch (error) {
         console.error("Couldn find kitties: ", error);
         alert("We couldnt contact with Tinder Beauty Cat")
     }
 }
 
-function handleSwipe(direction){
+function handleSwipe(direction) {
     if (direction === 'left') {
         card.classList.add('swipe-left')
-        
-    }else{
+
+    } else {
         card.classList.add('swipe-right')
         saveToFavorites(currentCatUrl)
     }
@@ -41,27 +51,29 @@ function handleSwipe(direction){
     setTimeout(fetchCat, 300)
 }
 
-function saveToFavorites(url){
+function saveToFavorites(url) {
     let favs = JSON.parse(localStorage.getItem('michiFavs')) || [];
-    if(!favs.includes(url)){
+    if (!favs.includes(url)) {
         favs.unshift(url)
         localStorage.setItem('michiFavs', JSON.stringify(favs))
         renderFavorites()
     }
 }
 
-function renderFavorites(){
+function renderFavorites() {
     const favs = JSON.parse(localStorage.getItem('michiFavs')) || [];
-    favList = innerHTML = favs.map(url => `<div class="h-24 rounded-lg overflow-hidden shadow-sm">
+    favList.innerHTML = favs.map(url => `
+        <div class="h-24 rounded-lg overflow-hidden shadow-sm">
                     <img src="${url}" class="w-full h-full object-cover">
-                </div>`).join('');
+                </div>
+                `).join('');
 }
 
-function toggleFavorites(){
+function toggleFavorites() {
     favPanel.classList.toggle('hidden')
 }
 
-function clearFavorites(){
+function clearFavorites() {
     localStorage.removeItem('michiFavs')
     renderFavorites();
 }
@@ -69,4 +81,3 @@ function clearFavorites(){
 fetchCat();
 renderFavorites();
 
- 
