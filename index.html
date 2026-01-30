@@ -19,6 +19,21 @@
             <span class="text-pink-500 font-bold text-xl"><i class="fas fa-paw"></i>
                 Tinder Beauty Kat</span>
 
+            <div
+                class="flex items-center gap-6 text-sm font-medium text-gray-600 overflow-x-auto no-scrollbar whitespace-nowrap pb-2 md:pb-0">
+
+                <a href="#home" class="hover:text-pink-500 transition">Home</a>
+                <a href="#facts" class="hover:text-pink-500 transition">Facts</a>
+                <a href="#tinder" class="hover:text-pink-500 transition">TinderKat</a>
+                <a href="#about" class="hover:text-pink-500 transition">About</a>
+                <a href="#faq" class="hover:text-pink-500 transition">FAQ</a>
+                <button onclick="toggleFavorites()"
+                    class="flex items-center gap-1 text-pink-500 hover:text-pink-600 transition-colors font-bold">
+                    <i class="fas fa-heart"></i> Favorites
+                </button>
+            </div>
+
+
             <p class="text-xs text-gray-400 hidden sm:block">Web Project "TinderKat" 2026</p>
         </div>
     </nav>
@@ -26,7 +41,7 @@
     <main class="container mx-auto flex-grow flex flex-col items-center justify-center p-4">
 
         <!-- Title -->
-        <section class="text-center mt-6">
+        <section class="text-center mt-6" id="home">
             <h1 class="text-4xl font-extrabold text-gray-800 mb-2">Welcome to Tinder Beauty Kat</h1>
             <p class="text-gray-600 max-w-xl mx-auto italic">
                 The website where feline dreams come true. Swipe, match and learn about our beautiful cats
@@ -36,30 +51,33 @@
         </section>
 
         <!-- Facts -->
-        <section class="container">
+        <section class="container" id="facts">
             <h2 class="text-3xl font-bold text-pink-400 text-center mb-8">Interesting Facts</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto py-10">
-            <div class="bg-pink-50 p-6 rounded-2xl shadow-sm border border-pink-100 text-center">
-                <i class="fas fa-bolt text-pink-500 text-3xl mb-4"></i>
-                <h3 class="font-bold text-gray-800 mb-2">High Jumpers</h3>
-                <p class="text-sm text-gray-600">Cats cam jump up to six times their length in a single bound! They are nature's true athletes</p>
+                <div class="bg-pink-50 p-6 rounded-2xl shadow-sm border border-pink-100 text-center">
+                    <i class="fas fa-bolt text-pink-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold text-gray-800 mb-2">High Jumpers</h3>
+                    <p class="text-sm text-gray-600">Cats cam jump up to six times their length in a single bound! They
+                        are nature's true athletes</p>
+                </div>
+                <div class="bg-pink-50 p-6 rounded-2xl shadow-sm border border-pink-100 text-center">
+                    <i class="fas fa-bolt text-pink-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold text-gray-800 mb-2">Super Hearing</h3>
+                    <p class="text-sm text-gray-600">A cat's hearing is much more sensitive than humans and dogs. They
+                        can hear high-frequency sounds</p>
+                </div>
+                <div class="bg-pink-50 p-6 rounded-2xl shadow-sm border border-pink-100 text-center">
+                    <i class="fas fa-bolt text-pink-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold text-gray-800 mb-2">Night Vision</h3>
+                    <p class="text-sm text-gray-600">Cats can see in one-sixth the amount of light that humans need to
+                        see clearly</p>
+                </div>
             </div>
-<div class="bg-pink-50 p-6 rounded-2xl shadow-sm border border-pink-100 text-center">
-                <i class="fas fa-bolt text-pink-500 text-3xl mb-4"></i>
-                <h3 class="font-bold text-gray-800 mb-2">Super Hearing</h3>
-                <p class="text-sm text-gray-600">A cat's hearing is much more sensitive than humans and dogs. They can hear high-frequency sounds</p>
-            </div>
-            <div class="bg-pink-50 p-6 rounded-2xl shadow-sm border border-pink-100 text-center">
-                <i class="fas fa-bolt text-pink-500 text-3xl mb-4"></i>
-                <h3 class="font-bold text-gray-800 mb-2">Night Vision</h3>
-                <p class="text-sm text-gray-600">Cats can see in one-sixth the amount of light that humans need to see clearly</p>
-            </div>
-            </div>
-            
+
         </section>
 
         <!-- Main Part, the TINDER -->
-        <section>
+        <section id="tinder">
             <div
                 class="relative w-full max-w-sm h[-600px] bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col">
                 <div class="p-4 flex justify-between items-center border-b">
@@ -99,11 +117,26 @@
                     </button>
                 </div>
             </div>
+            <br><br><br><br>
         </section>
 
-
+        <!-- ABOUT this project -->
+        <section id="about" class="max-w-3xl mx-auto bg-white p-8 rounded-3xl shadow-lg mb-10 border border-gray-100">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-l-4 border-pink-500 pl-4">About this project</h2>
+            <div class="space-y-4 text-gray-600 leading-relaxed">
+                <p>TinderKat was developed to explore the integration of <strong>REST APIs</strong> and External JSON
+                    data structures</p>
+                <p>Our mission is to combine computer science education with a love for animals. Every cat shown in this
+                    app is randomly generated from a global database, ensuring each swipe is a unique experience</p>
+                <div class="flex gao-4 pt-4">
+                    <span class="bg-gray-100 px-3 py-1 rounded-full text-xs font-semibold uppercase">#HTML5</span>
+                    <span class="bg-gray-100 px-3 py-1 rounded-full text-xs font-semibold uppercase">#TailwindCSS</span>
+                    <span class="bg-gray-100 px-3 py-1 rounded-full text-xs font-semibold uppercase">#JavaScript</span>
+                </div>
+            </div>
+        </section>
         <!-- Frequently Asked Questions (FAQ) -->
-         <section class="max-w-3xl mx-auto py-12 px-4">
+        <section id="faq" class="max-w-3xl mx-auto py-12 px-4">
             <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Frequently Asked Questions</h2>
 
             <div class="space-y-4">
@@ -111,33 +144,38 @@
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                     <h3 class="text-lg fint-bold text-pink-600 mb-2 italic">How does TinderKat work?</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">
-                        The app connects to a global database via "The CAT API to fetch random images. Then, it pulls personality data from a local JSON file to give each cat a unique name, job, and location"
+                        The app connects to a global database via "The CAT API to fetch random images. Then, it pulls
+                        personality data from a local JSON file to give each cat a unique name, job, and location"
                     </p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                     <h3 class="text-lg fint-bold text-pink-600 mb-2 italic">Can I actually adopt these cats?</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">
-                        While these specific matches are for fun, we encourage users to visit their local animal shelters if they are looking for a real-life furry companion!
+                        While these specific matches are for fun, we encourage users to visit their local animal
+                        shelters if they are looking for a real-life furry companion!
                     </p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                     <h3 class="text-lg fint-bold text-pink-600 mb-2 italic">Where does the data come from?</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">
-                        The images are provided by public feline repositories, and the technical implementation uses HTML5, Tailwind CSS and asynchronous Javascript
+                        The images are provided by public feline repositories, and the technical implementation uses
+                        HTML5, Tailwind CSS and asynchronous Javascript
                     </p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                     <h3 class="text-lg fint-bold text-pink-600 mb-2 italic">Are my favorites saved?</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">
-                        Yes! We use the browser's <strong>Local Storage</strong>, which means your matches will be saved even if you close the tab or refresh the page
+                        Yes! We use the browser's <strong>Local Storage</strong>, which means your matches will be saved
+                        even if you close the tab or refresh the page
                     </p>
                 </div>
 
             </div>
-         </section>
+        </section>
+
     </main>
 
     <!-- Favorites Panel (sidebar kind of thing?) -->
@@ -168,7 +206,7 @@
 
     </footer>
 
-    
+
 
     <script src="index.js"></script>
 </body>
