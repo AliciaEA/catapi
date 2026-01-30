@@ -13,14 +13,15 @@
 
 <body class="bg-gray-100 min-h-screen flex flex-col font-sans">
 
-    <nav class="bg-white shador-md p-4 w-full">
+    <nav class="bg-white shador-md p-4 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
 
-            <span class="text-pink-500 font-bold text-xl"><i class="fas fa-paw"></i>
-                Tinder Beauty Kat</span>
+            <div class="flex items-center gap-2 text-pink-500 font-bold text-xl">
+                <i class="fas fa-paw"></i>
+                <span>TinderKat</span>
+            </div>
 
-            <div
-                class="flex items-center gap-6 text-sm font-medium text-gray-600 overflow-x-auto no-scrollbar whitespace-nowrap pb-2 md:pb-0">
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
 
                 <a href="#home" class="hover:text-pink-500 transition">Home</a>
                 <a href="#facts" class="hover:text-pink-500 transition">Facts</a>
@@ -33,10 +34,32 @@
                 </button>
             </div>
 
-
-            <p class="text-xs text-gray-400 hidden sm:block">Web Project "TinderKat" 2026</p>
+            <button onclick="toggleMobileMenu()" class="md:hidden text-gray-600 text-2xl">
+            <i class="fas fa-bars"></i>
+        </button>
         </div>
     </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-black/50 z-[60] hidden backdrop-blur-sm">
+        <div class="absolute left-0 top-0 h-full w-64 bg-white p-6 shadow-2xl flex flex-col gap-6">
+            <div class="flex justify-between items-center border-b pb-4">
+                <span class="font-bold text-pink-500">Menu</span>
+                <button onclick="toggleMobileMenu()" class="text-gray-500 text-xl"><i class="fas fa-times"></i></button>
+            </div>
+
+            <div class="flex flex-col gap-4 text-gray-600 font-medium">
+            <a href="#home" onclick="toggleMobileMenu()" class="hover:text-pink-500"><i class="fas fa-home w-8"></i> Home</a>
+            <a href="#tinder" onclick="toggleMobileMenu()" class="hover:text-pink-500"><i class="fas fa-fire w-8"></i> TinderKat</a>
+            <a href="#facts" onclick="toggleMobileMenu()" class="hover:text-pink-500"><i class="fas fa-lightbulb w-8"></i> Facts</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="hover:text-pink-500"><i class="fas fa-info-circle w-8"></i> About</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="hover:text-pink-500"><i class="fas fa-question-circle w-8"></i> FAQ</a>
+            <hr>
+            <button onclick="toggleMobileMenu(); toggleFavorites();" class="text-pink-500 text-left font-bold">
+                <i class="fas fa-heart w-8"></i> Favorites
+            </button>
+        </div>
+        </div>
+    </div>
 
     <main class="container mx-auto flex-grow flex flex-col items-center justify-center p-4">
 
@@ -179,7 +202,7 @@
     </main>
 
     <!-- Favorites Panel (sidebar kind of thing?) -->
-    <div id="fav-panel" class="fixed inset-0 bg-black/50 hidden z-20 backdrop-blur-sm">
+    <div id="fav-panel" class="fixed inset-0 bg-black/50 hidden z-[70] backdrop-blur-sm">
         <div class="absolute right-0 top-0 h-full w-80 bg-white p-6 shadow-2xl overflow-y-auto no-scrollbar">
             <div class="flex justify-between items-center mb-6">
                 <h3 class="text-xl font-bold text-gray-800">Matches ❤️</h3>
