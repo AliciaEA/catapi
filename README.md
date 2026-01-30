@@ -1,6 +1,17 @@
-# 🐾TinderKat: Find your Purr-fect Match
+<div align="center">
 
-Is you cat single, and looking for a partner? (we don't accept cheaters). Do you want to adopt a cat? Maybe you just want to meet one?. Then TinderKat is for you! Adopt a beautiful cat, or get a partner your yours.
+  # 🐾TinderKat: Find your Purr-fect Match
+
+Is you cat single, and looking for a partner? (we don't accept cheaters). Do you want to adopt a cat? Maybe you just want to meet one?. Then TinderKat is for you! Adopt a beautiful cat, or get your car a partner.
+
+![Hackatime](https://hackatime-badge.hackclub.com/U091QQE2X26/catapi)
+
+<img width="1886" height="819" alt="image" src="https://github.com/user-attachments/assets/534a2e77-423b-440d-ae2f-4ba0d7829456" />
+
+
+
+</div>
+
 
 ---
 
