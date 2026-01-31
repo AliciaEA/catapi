@@ -15,6 +15,17 @@ Is you cat single, and looking for a partner? (we don't accept cheaters). Do you
 
 ---
 
+## 📝 What is TinderKat?
+**TinderKat** is an interactive web discovery platform where users can swipe through feline profiles. Each profile is unique, combining real-time imagery with randomly generated personalities. It is a fun, lighthearted way to simulate adoption or "feline dating" while exploring the power of modern web APIs
+
+---
+
+## 💡 Why I Made This Project
+
+I thought it was a cute idea, and wanted to practice creating a website with an API
+
+---
+
 ## 🚀 Features (9)
 
 * **Dynamic Matching Engine (TinderKat)**: Combines **The Cat API** for images with a local `data.json` for names and occupations.
